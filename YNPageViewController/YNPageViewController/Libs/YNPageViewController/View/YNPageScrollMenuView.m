@@ -162,7 +162,8 @@
             /// 不能滚动则平分
             if (!self.configration.scrollMenu) {
                 [self.itemsArrayM enumerateObjectsUsingBlock:^(UIButton  * button, NSUInteger idx, BOOL * _Nonnull stop) {
-                    itemW = self.scrollView.yn_width / self.itemsArrayM.count;
+                    //7-2 修改-个人主页左对齐
+                    itemW = self.scrollView.yn_width /4.5;// self.itemsArrayM.count;
                     itemX = itemW *idx;
                     button.frame = CGRectMake(itemX, itemY, itemW, itemH);
                 }];
